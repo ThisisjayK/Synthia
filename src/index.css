@@ -1,1 +1,29 @@
 @import "tailwindcss";
+
+/* ── Base ────────────────────────────────────────────────────────────────────
+   Font stack applied globally so every component inherits it.
+   Individual components no longer need fontFamily in inline styles.
+   ────────────────────────────────────────────────────────────────────────── */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Shared animation ────────────────────────────────────────────────────────
+   Defined once here instead of inside component <style> tags.
+   ────────────────────────────────────────────────────────────────────────── */
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
